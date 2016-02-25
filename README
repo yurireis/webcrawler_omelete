@@ -1,1 +1,17 @@
-Esse é o leia-me
+Código criado em python em ambiente linux.
+Necessárias a existência das bibliotecas sys, pymongo, urllib2, re e bs4 instaladas.
+
+Ao ser executado, o código em python faz uma pesquisa no blog http://omelete.uol.com.br/ por artigos sobre a série "The Walking Dead"
+e os armazena em um banco de dados NoSQL do MongoDB com a seguinte estrutura:
+
+A coleção Pagina é composta dos seguintes atributos:
+id -> que é chave primária, e é composto pela url da página.
+titulo -> é armazenado neste índice o título da página.
+NumComentarios → que por sua vez contém o número de comentários da página.
+
+
+A coleção Comentario por sua vez, possui os atributos abaixo:
+id -> este campo é auto incremental e chave primária, para identificar o comentário entre os demais da página.
+url -> contém a url da página da notícia.
+comentario -> campo responsável pelo armazenamento do corpo do texto do comentário.
+curtidas -> guarda a quantidade de curtidas do comentário.
